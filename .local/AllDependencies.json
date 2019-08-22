@@ -1118,15 +1118,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R2\\.nuget\\packages\\": {}
+    "C:\\Users\\reng\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "UiPath_REFramework_UiDemo",
       "projectName": "UiPath_REFramework_UiDemo",
-      "projectPath": "C:\\Users\\R2\\Documents\\UiPath\\UiPath_REFramework_UiDemo\\.local",
-      "packagesPath": "C:\\Users\\R2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\R2\\Documents\\UiPath\\UiPath_REFramework_UiDemo\\.local"
+      "projectPath": "E:\\WorkSpace\\UiPath_REFramework_UiDemo\\.local",
+      "packagesPath": "C:\\Users\\reng\\.nuget\\packages\\",
+      "outputPath": "E:\\WorkSpace\\UiPath_REFramework_UiDemo\\.local"
     },
     "frameworks": {
       "net461": {
