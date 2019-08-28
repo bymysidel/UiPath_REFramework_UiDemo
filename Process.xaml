@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>728,822</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>728,782</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,18 +87,19 @@
           <av:PointCollection x:Key="ConnectorLocation">400,86 400,136.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="assign" sap:VirtualizedContainerService.HintSize="298,358" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="assign" sap:VirtualizedContainerService.HintSize="298,462" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
+        <WriteLine DisplayName="写入行" sap:VirtualizedContainerService.HintSize="260,64" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;in_TransactionItem:&quot; + in_TransactionItem.ToString]" />
         <Assign DisplayName="赋值" sap:VirtualizedContainerService.HintSize="260,62" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[CashIn]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[in_TransactionItem.ToString]</InArgument>
+            <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("CashIn").ToString]</InArgument>
           </Assign.Value>
         </Assign>
         <Assign DisplayName="赋值" sap:VirtualizedContainerService.HintSize="260,62" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -106,7 +107,7 @@
             <OutArgument x:TypeArguments="x:String">[OnUsCheck]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[in_TransactionItem.ToString]</InArgument>
+            <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("OnUsCheck").ToString]</InArgument>
           </Assign.Value>
         </Assign>
         <Assign DisplayName="赋值" sap:VirtualizedContainerService.HintSize="260,62" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -114,7 +115,7 @@
             <OutArgument x:TypeArguments="x:String">[NotOnUsCheck]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[in_TransactionItem.ToString]</InArgument>
+            <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("NotOnUsCheck").ToString]</InArgument>
           </Assign.Value>
         </Assign>
       </Sequence>
